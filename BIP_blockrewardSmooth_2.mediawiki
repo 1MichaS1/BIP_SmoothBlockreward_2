@@ -59,7 +59,7 @@ https://github.com/1MichaS1/BIP_SmoothBlockreward_2/blob/master/simulations/bloc
 
 ==Rationale==
 
-The original emission schedule is kept quite accurately, see ilustrative diagrams in the annex.
+The original emission schedule is kept quite accurately, see illustrative diagrams in the annex.
 
 The formulas are simple, require little amount of code lines.
 
