@@ -90,6 +90,7 @@ Block reward vs. time:
 <img src=></img>
 
 Total amount of mined bitcoins over time:
+
 <img src=></img>
 
 <img src=></img>
