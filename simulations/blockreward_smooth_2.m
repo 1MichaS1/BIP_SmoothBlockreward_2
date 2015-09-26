@@ -72,6 +72,11 @@ sum_org = nan*ones(1,Nsim*delta_t);
 sum_bip = nan*ones(1,Nsim*delta_t);
 cnt_dec=1;
 cnt_cycl = 1;
+record_bip = nan*ones(3,Nsim*210000/26250+1);
+record_idx = 1;
+record_bip(1,1) = 1;
+record_bip(2,1) = reward_bip;
+record_bip(3,1) = reward_bip;
 for k = 1:Nsim,
     tmpstr1 = num2str(reward,'%011.8f'); tmpstr2 = num2str(reward_bip,'%011.8f');
     pause(0.1);% to avoid artifacts of printing out 0.00000000 or 1.00000000 instead of the proper values
@@ -95,6 +100,10 @@ for k = 1:Nsim,
                     reward_bip=0;% final money supply will be same as orig. BTC schedule
                 end
                 % ---------- </SPECIAL> ----------
+                record_idx = record_idx + 1;
+                record_bip(1,record_idx) = blockHeight+1;
+                record_bip(2,record_idx) = reward_bip;
+                record_bip(3,record_idx) = sum_bip(blockHeight)+reward_bip;
             end
             cnt_dec = lut_mod(cnt_dec);
         end
@@ -102,6 +111,10 @@ for k = 1:Nsim,
     reward = floor(reward*1e8 / 2)/1e8;
     if blockHeight < keep_constant_reward_till_this_block,
         reward_bip = floor(reward_bip*1e8 / 2)/1e8;
+        record_idx = record_idx + 1;
+        record_bip(1,record_idx) = blockHeight+1;
+        record_bip(2,record_idx) = reward_bip;
+        record_bip(3,record_idx) = sum_bip(blockHeight)+reward_bip;
     end
 end
 accu      % 20,999,999.9769000 BTC
@@ -109,6 +122,7 @@ accu_bip
 (accu_bip-accu)
 %find(rew_bip==0,1) - find(rew_org==0,1)
 
+record_bip'
 
 % ----------Plot: ----------
 figure;
