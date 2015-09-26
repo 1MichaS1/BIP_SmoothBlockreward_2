@@ -127,9 +127,9 @@ sizefig(600,500);
 figure;
 hold on;
 plot([1:length(rew_org(1:1440/block_time_min:end))]/365.25,rew_org(1:1440/block_time_min:end), ...
-    'b-.');% plot 1 dot per day
+    'b');% plot 1 dot per day
 plot([1:length(rew_bip(1:1440/block_time_min:end))]/365.25,rew_bip(1:1440/block_time_min:end), ...
-    'r-.');% plot 1 dot per day
+    'r');% plot 1 dot per day
 grid on;
 title('Block Reward vs. Time - Zoomed')
 xlabel('Years')
