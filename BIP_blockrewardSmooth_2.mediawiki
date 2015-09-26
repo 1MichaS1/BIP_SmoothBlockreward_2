@@ -67,9 +67,9 @@ https://github.com/1MichaS1/BIP_SmoothBlockreward_2/blob/master/simulations/bloc
 
 # Comparison of emission schedules:
 
-** With old block reward schedule, the last satoshi is mined at block height 6,930,000, which is ca. 131.75 years after inception, when assuming on average 10 minutes block time.
+* With old block reward schedule, the last satoshi is mined at block height 6,930,000, which is ca. 131.75 years after inception, when assuming on average 10 minutes block time.
 
-** With the new proposal, the end of the "regular" schedule is reached at block height 6,720,000, which is about 127.75 years after inception. The remaining 0,00078750 BTC are emitted as 1 satoshi per block until block height 6,798,750, which occurs ca. 129.25 years after inception.
+* With the new proposal, the end of the "regular" schedule is reached at block height 6,720,000, which is about 127.75 years after inception. The remaining 0,00078750 BTC are emitted as 1 satoshi per block until block height 6,798,750, which occurs ca. 129.25 years after inception.
 
 
 ==Deployment==
