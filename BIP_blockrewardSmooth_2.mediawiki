@@ -51,7 +51,7 @@ After that, the total number of bitcoins mined is still 78,750 satoshis short of
 
 The algorithm is also programmed here:
 
-https://github.com/1MichaS1/BIP_SmoothBlockreward_2/blob/master/algorithm/blockreward_smooth_2.m
+https://github.com/1MichaS1/BIP_SmoothBlockreward_2/blob/master/simulations/blockreward_smooth_2.m
 
 
 ==Rationale==
