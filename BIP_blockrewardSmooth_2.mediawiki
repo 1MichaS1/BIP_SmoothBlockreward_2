@@ -85,16 +85,18 @@ SPV wallets are not affected and require no change or update.
 
 Block reward vs. time:
 
-<img src=></img>
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114846/dc84e318-63f8-11e5-9fb6-83a942fd2e44.png></img>
 
-<img src=></img>
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114848/e0df56d2-63f8-11e5-8f46-ffff75411941.png></img>
+
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114850/e3b592e0-63f8-11e5-8c12-09a4c27df6c0.png></img>
 
 Total amount of mined bitcoins over time:
 
-<img src=></img>
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114852/e5f061a2-63f8-11e5-8ccd-285852663eb7.png></img>
 
-<img src=></img>
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114854/eb225004-63f8-11e5-9274-32926d784ea6.png></img>
 
-<img src=></img>
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114856/f0839490-63f8-11e5-87d3-3da2509dff72.png></img>
 
-<img src=></img>
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114857/f40a5b3a-63f8-11e5-87bc-37045614f9ce.png></img>
