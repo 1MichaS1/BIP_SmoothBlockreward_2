@@ -113,7 +113,7 @@ Total amount of mined bitcoins over time:
 Years<p>
 after	Block	Block<p>
 inception	Height	Reward<p>
-0,00	1	50,00000000<p>
+<nowiki>0,00	     1	50,00000000</nowiki><p>
 3,99	210001	25,00000000<p>
 7,99	420001	12,50000000<p>
 11,98	630001	6,25000000<p>
