@@ -1,1 +1,99 @@
-test
+<pre>
+  BIP: SBR2 (not assigned a BIP number yet)
+  Title: Block Reward Decay in small increments
+  Author: Michael_S user of bitcointalk.org
+  Discussions-To: t.b.d.
+  Status: Draft
+  Type: Standards Track
+  Created: 2015-09-26
+</pre>
+
+;Copyright notice:
+: This document is placed in the public domain
+
+==Abstract==
+
+From a certain point on (ca. 2 years (105,000 blocks) after block reward has halved to 6.25 BTC) the block reward reduces more continuously in small steps instead of halving every 210,000 blocks.
+
+This avoids future disruption of the Bitcoin system.
+
+This BIP is designed such that the new smooth block reward schedule follows the original halving schedule very closely, and such that the final amount of bitcoins in circulation is exactly (down to the last satoshi) the same as in the original schedule, namely 20,999,999.97690000 BTC.
+
+==Motivation==
+
+# Avoid future disruptive shocks of block reward halvings every 4 years, posing a risk to Bitcoin system stability in the future
+
+# Keep block reward schedule very close to the original schedule
+
+# Keep the total number of bitcoins ever created at 20,999,999.9769000.
+
+# Provide a simple algorithm that can be written in few lines of code.
+
+==Specification==
+
+The Block Reward (BR) schedule is smoothened starting with block height 735,001. This is the 105,001-st block that has BR=6.25 BTC acc. to the classical Bitcoin block reward schedule.
+
+Starting with this block, block reward is decreased in small steps, as follows:
+
+* Define the constant factor d = (2^38-21144450772)/2^38 = 0.92307693620387 
+
+* Starting with block height 735,001 block reward gets reduced by multiplication with d and rounding down to full satoshis, and is then kept constant for 26,250 blocks. After that, the next reduction occurs.
+
+* All variables are double precision with more than 50 bits mantissa, to avoid any loss of accuracy.
+
+* According to this schedule, the last BR is equal to 1 satoshi at block heights 6,693,751 to 6,720,000.
+
+After that, the total number of bitcoins mined is still 78,750 satoshis short of 20,999,999.97690000 BTC, which is the total amount of bitcoins mined acc. to the old emission schedule. To achieve total parity in terms of the total nb. of bitcoins mined, this proposal defines:
+
+* The BR is kept at BR = 1 satoshi for another 78,750 blocks, i.e. for blocks 6,720,001 to 6,798,750.
+
+* For blocks >= 6,798,751, the BR is set to 0.00000000 BTC.
+
+The algorithm is also programmed here:
+
+https://github.com/1MichaS1/BIP_SmoothBlockreward_2/blob/master/algorithm/blockreward_smooth_2.m
+
+
+==Rationale==
+
+The original emission schedule is kept quite accurately, see ilustrative diagrams in the annex.
+
+The formulas are simple, require little amount of code lines.
+
+Comparison of emission schedules:
+
+* With old block reward schedule, the last satoshi is mined at block height 6,930,000, which is ca. 131.75 years after inception, when assuming on average 10 minutes block time.
+
+* With the new proposal, the end of the "regular" schedule is reached at block height 6,720,000, which is about 127.75 years after inception. The remaining 0,00078750 BTC are emitted as 1 satoshi per block until block height 6,798,750, which occurs ca. 129.25 years after inception.
+
+
+==Deployment==
+
+* Deploy the new code well in advance. There is sufficient time, since the change will only take effect at block height 735,001 around the year 2021..2022. The new code will be identical to the legacy code until and including block height 735,000.
+
+* At block height 735,001, the mining reward will the first time deviate from the original schedule. For this block 735,001 block reward will be 5.76923085 BTC instead of 6.25 BTC. The software will reject blocks with mining rewards acc. to the old emission schedule, i.e. blocks assigning the miner a reward of more than 5.76923085 BTC will be rejected.
+
+
+==Backward compatibility==
+
+All older clients are not compatible with this change starting with block height 735,001 (around year 2021..2022). Before that, there is full downward compatibility.
+
+SPV wallets are not affected and require no change or update. 
+
+
+==Annex - Illustrations==
+
+Block reward vs. time:
+
+<img src=></img>
+
+<img src=></img>
+
+Total amount of mined bitcoins over time:
+<img src=></img>
+
+<img src=></img>
+
+<img src=></img>
+
+<img src=></img>
