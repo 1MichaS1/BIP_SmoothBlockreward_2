@@ -11,13 +11,15 @@
 ;Copyright notice:
 : This document is placed in the public domain
 
+
 ==Abstract==
 
-From a certain point on (ca. 2 years (105,000 blocks) after block reward has halved to 6.25 BTC) the block reward reduces more continuously in small steps instead of halving every 210,000 blocks.
+From a certain point on (ca. 2 years (105,000 blocks) after block reward has halved to 6.25 BTC) the block reward reduces more continuously in small steps of -7.7% roughly every 1/2 year instead of halving every 210,000 blocks (ca. 4 years).
 
 This avoids future disruption of the Bitcoin system.
 
 This BIP is designed such that the new smooth block reward schedule follows the original halving schedule very closely, and such that the final amount of bitcoins in circulation is exactly (down to the last satoshi) the same as in the original schedule, namely 20,999,999.97690000 BTC.
+
 
 ==Motivation==
 
@@ -28,6 +30,7 @@ This BIP is designed such that the new smooth block reward schedule follows the 
 # Keep the total number of bitcoins ever created at 20,999,999.9769000.
 
 # Provide a simple algorithm that can be written in few lines of code.
+
 
 ==Specification==
 
