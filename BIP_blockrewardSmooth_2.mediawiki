@@ -91,6 +91,8 @@ Block reward vs. time:
 
 <img src=https://cloud.githubusercontent.com/assets/14133304/10114898/c6484bfc-63f9-11e5-8f99-0ee7e5965ed8.png></img>
 
+<img src=https://cloud.githubusercontent.com/assets/14133304/10114989/6bc36476-63fb-11e5-8e9b-2eb84bac45be.png></img>
+
 Total amount of mined bitcoins over time:
 
 <img src=https://cloud.githubusercontent.com/assets/14133304/10114852/e5f061a2-63f8-11e5-8ccd-285852663eb7.png></img>
