@@ -90,6 +90,8 @@ SPV wallets are not affected and require no change or update.
 
 ====Illustrations====
 
+The blue line illustrates the current schedule, the red line illustrates the new proposal.
+
 Block reward vs. time:
 
 <img src=https://cloud.githubusercontent.com/assets/14133304/10114846/dc84e318-63f8-11e5-9fb6-83a942fd2e44.png></img>
