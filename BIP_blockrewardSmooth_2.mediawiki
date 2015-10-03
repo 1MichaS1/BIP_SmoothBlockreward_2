@@ -63,13 +63,13 @@ https://github.com/1MichaS1/BIP_SmoothBlockreward_2/blob/master/simulations/bloc
 
 # The formulas are simple, require little amount of code lines.
 
-# A block reward reduction at even finer granularity (e.g. every block, or every 4375 blocks = ca. 1 month) causes more rounding artifacts and therefore needs to contain more special if-conditions to correct for this - it cannot be specified by a formula as simple as for this BIP. Therefore a roughly 1/2 year interval for block reward reduction is chosen. Reduction steps are only -7.7% and hence fine enough to avoid any harmful impacts to the Bitcoin eco-system.
+# A block reward reduction at even finer granularity (e.g. every block, or every 4375 blocks = ca. 1 month) causes more rounding artifacts and therefore needs to contain more special if-conditions to correct for this - it cannot be specified by a formula as simple as for this BIP. Therefore a roughly 1/2 year interval for block reward reduction is chosen. Reduction steps are only -7.7% and hence fine enough to avoid any shocks to the Bitcoin eco-system.
 
 # Comparison of emission schedules:
 
-* With old block reward schedule, the last satoshi is mined at block height 6,930,000, which is ca. 131.75 years after inception, when assuming on average 10 minutes block time.
+* With the old block reward schedule, the last satoshi is mined at block height 6,930,000 which is ca. 131.75 years after inception, when assuming on average 10 minutes block time.
 
-* With the new proposal, the end of the "regular" schedule is reached at block height 6,720,000, which is about 127.75 years after inception. The remaining 0,00078750 BTC are emitted as 1 satoshi per block until block height 6,798,750, which occurs ca. 129.25 years after inception.
+* With the new proposed reward schedule, the last satoshi is mined at block height 6,798,750 which is ca. 129.25 years after inception, when assuming on average 10 minutes block time.
 
 
 ==Deployment==
